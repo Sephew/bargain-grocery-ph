@@ -21,3 +21,8 @@ FUTURE: Recommender Sys + Website Up in the cloud
 NEED TO DOs:
 Folder Structure
 Ingestion 
+
+
+To run
+OPTIONAL - create a venv (python -m venv venv)
+pip install -r requirements.txt

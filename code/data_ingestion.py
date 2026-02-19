@@ -19,7 +19,8 @@
 
 
 import requests
-from bs4 import BeautifulSoup
+# from bs4 import BeautifulSoup
+import pandas as pd
 url = "https://www.da.gov.ph/price-monitoring/"
 
 headers = {
@@ -30,6 +31,13 @@ headers = {
 }
 response = requests.get(url,headers=headers)
 
-soup = BeautifulSoup(response.text,'html.parser')
-
+soup = BeautifulSoup(response.content,'html.parser')
 print(soup.prettify())
+
+print("-"*50)
+
+# #get <table> tag
+# iterate through tr then tc, get all values (name & anchor tag for pdf link) and store in a list of dicts
+
+# next step: open pdf, read pdf using csv then store into sql database
+# setup sql database with 2 tables: price & nutrition
