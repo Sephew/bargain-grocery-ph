@@ -1,4 +1,4 @@
-# telltale-financer
+# Bargain Grocery PH
 Recommend Grocery to Purchase based on DOA price monitoring fluctuations (discourage purchasing higher-priced vegetables, recommend cheaper vegetables and meals to make from them)
 
 Input:
