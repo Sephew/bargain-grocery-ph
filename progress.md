@@ -1,6 +1,7 @@
 
 
 2/18/2026 - Transitioned from Sentiment Analytics Stock trader to Price Watch Grocery Ingredients Recommendation System. Because it's practical and can help me practice multiple backend disciplines
+
 2/19/2026 - Created file structures & listed the requirements needed, did simple webscraping tests with requests & beautifulsoup4
 
 2/20/2026 - Understood AJAX & Jquery, tried to look for AJAX requests we can use, or hidden APIs to no success. Concluded the best scenario is to look for <table> and iterate for each tr then tc to get the <a> link of the pdf
