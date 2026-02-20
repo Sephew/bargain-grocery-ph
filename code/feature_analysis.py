@@ -12,3 +12,11 @@
 # Volatility Score - mean square of fluctuation of price between values
 # Seasonal Score - Average of each quarter compared to eachother 
 # Price Change 
+
+import tabula
+import pandas as pd
+
+pdf_path = 'https://www.da.gov.ph/wp-content/uploads/2024/06/Weekly-Average-Prices-June-10-15-2024.pdf'
+pdf_table = tabula.read_pdf(pdf_path, stream=True, pages='all')
+
+print(pdf_table)

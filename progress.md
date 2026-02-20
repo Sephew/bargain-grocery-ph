@@ -8,3 +8,9 @@ Next Step: Iterate through <tables> get the anchor links, open PDFs (test with 1
 Mistakes Made: Spent time trying different methods to find hidden APIs or requests for simpler implementation, however it seems like the data does not call from a backend because no XHR or fetch requests where made. Most likely, files are stored directly to wordpress.
 
 NOTE: If you will experiment, use ipynb to document exploration.
+
+
+2/21/2026 - Progress: I was able to get the .pdf list of links ready for the Weekly Average Report, However a slight ego inside me is telling me I can organize the messy data of the "Daily Report" to maybe increase accuracy and further the decision-power possible. But for now, the weekly report will do to not over scope my needs.
+- Problem arised when only more recent years are able to use "Tabula-py", 2023 dataset are not text-based and are unstructed data, we will have to use OCR or Machine Learning to extract data from this.
+
+Next Step: setup OCR to iterate from PDF_list and get tabularized data (pandas dataframe preferably), then store into database (mySQL)

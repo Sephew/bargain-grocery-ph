@@ -19,7 +19,7 @@
 
 
 import requests
-# from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup
 import pandas as pd
 url = "https://www.da.gov.ph/price-monitoring/"
 
@@ -36,8 +36,38 @@ print(soup.prettify())
 
 print("-"*50)
 
-# #get <table> tag
-# iterate through tr then tc, get all values (name & anchor tag for pdf link) and store in a list of dicts
+#Get List of all tables in the webpage (202)
+tables = soup.find_all('table')[1:5]
+
+#Get tables with attribute ''
+
+PDF_list = []
+
+
+#For the first four tables (2026 - 2023), find <a> element with href tag, get href link that ends with .pdf then store into a list for later use.
+for table in tables:
+    for anchor in table.find_all('a',href=True):
+        if anchor['href'].endswith('.pdf'):
+            print("PDF LINK: ",anchor['href'])
+            PDF_list.append(anchor['href'])
+
+
 
 # next step: open pdf, read pdf using csv then store into sql database
 # setup sql database with 2 tables: price & nutrition
+
+
+#Reading the PDF_list using Camelot
+
+import camelot
+
+table_test = camelot.read_pdf('https://www.da.gov.ph/wp-content/uploads/2023/10/Weekly-Average-Prices-October-2-6-2023.pdf',pages='all')
+df_test = table_test.df
+
+
+
+for pdf in PDF_list:
+    tables = camelot.read_pdf(pdf,pages='all')
+    for table in tables:
+        df = table.df
+        print(df)
