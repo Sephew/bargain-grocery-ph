@@ -12,3 +12,37 @@ NOTE: If you will experiment, use ipynb to document exploration.
 
 
 2/21/2026 - I did not push my commit from my desktop, so now I have to redo progress from yesterday. This should be easy because I now know how to do it, all I need to do is recollect the process from memory.
+
+2/24/2026 - 
+1) Build these tables
+
+commodities (manual/semi-auto)
+
+commodity_nutrition (manual)
+
+weekly_prices (automated)
+
+optional but highly recommended: raw_weekly_rows (raw extraction log)
+
+2) Ingestion logic each week (structured data)
+
+Extract all rows into raw_weekly_rows (OCR)
+
+Try to match each raw row to a commodity_id
+
+If matched → insert into weekly_prices
+
+If not matched → flag as “needs mapping” (you update commodities to intervene)
+
+
+Add a column in commodities like:
+
+canonical_name
+
+aliases (or a separate table commodity_aliases)
+
+Because government PDFs will name the same thing 3 different ways across time.
+
+3) Ingestion logic each week (unstructured data)
+
+from dataset of structured, fine-tune a model, reduce loss function, test then deploy.
