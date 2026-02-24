@@ -9,3 +9,6 @@ Next Step: Iterate through <tables> get the anchor links, open PDFs (test with 1
 Mistakes Made: Spent time trying different methods to find hidden APIs or requests for simpler implementation, however it seems like the data does not call from a backend because no XHR or fetch requests where made. Most likely, files are stored directly to wordpress.
 
 NOTE: If you will experiment, use ipynb to document exploration.
+
+
+2/21/2026 - I did not push my commit from my desktop, so now I have to redo progress from yesterday. This should be easy because I now know how to do it, all I need to do is recollect the process from memory.
