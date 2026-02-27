@@ -1,0 +1,1 @@
+# Use this to get the weekly update, instead of all of the tables (for future use)
